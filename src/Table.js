@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
-import DataGrid from "react-data-grid";
-import { exportToCsv, exportToXlsx, exportToPdf } from './exportUtils';
+import DataGrid, { exportToCsv, exportToXlsx, exportToPdf } from "react-data-grid";
+
 import "react-data-grid/lib/styles.css";
 import { mockDataContacts } from "./components/Data";
 function Table() {
@@ -109,7 +109,7 @@ function Table() {
 
   return (
     <div className="bg-red-500 w-full h-screen flex  items-center ">
-      <div className={toolbarClassname}>
+      {/* <div className={toolbarClassname}>
         <ExportButton
           onExport={() => exportToCsv(gridElement, "CommonFeatures.csv")}
         >
@@ -125,7 +125,7 @@ function Table() {
         >
           Export to PDF
         </ExportButton>
-      </div>
+      </div> */}
       {gridElement}
     </div>
   );
